@@ -1,3 +1,7 @@
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
+
+
 # Create the model: model
 model = Sequential()
 
@@ -15,4 +19,4 @@ model.add(Dense(10, activation='softmax', input_shape=input_shape))
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 
 # Fit the model
-model.fit(X,y,validation_split=0.3, epochs=10)
+model.fit(X, y ,validation_split=0.3, epochs=10)
