@@ -6,14 +6,13 @@ from tensorflow.keras.layers import Dense
 model = Sequential()
 
 # Add the first hidden layer
-input_shape=(784,)
-model.add(Dense(50, activation='relu',input_shape=input_shape))
+model.add(Dense(50, activation='relu',input_shape=(784, )))
 
 # Add the second hidden layer
-model.add(Dense(50, activation='relu', input_shape=input_shape))
+model.add(Dense(50, activation='relu'))
 
 # Add the output layer
-model.add(Dense(10, activation='softmax', input_shape=input_shape))
+model.add(Dense(10, activation='softmax'))
 
 # Compile the model
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
